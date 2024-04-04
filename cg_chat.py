@@ -134,7 +134,7 @@ def handle_chat():
 
 
 
- default_questions = [
+  default_questions = [
       "Email Recruiter",
       "Interview Preparation",
       "Networking",
