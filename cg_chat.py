@@ -206,7 +206,7 @@ def handle_chat():
                                     "type": "array",
                                     "items": {
                                         "type": "string",
-                                        "enum": ["current_pathway_salary","switch_pathway","career_progress","recommended_skills","job_details","recommended_employers","learning","resume_recommendation","networking","interview_preparation","other"]
+                                        "enum": ["current_pathway_salary","switch_pathway","career_progress","recommended_skills","job_details","recommended_employers","learning","resume_recommendation","networking","interview_preparation","other",'greetings']
                                     },
                                     "description": "List of user intent",
                                 }
@@ -369,6 +369,13 @@ def handle_chat():
             print(output)
             prompt += f'User Profile: {output}'
             Redirect_Message = ''
+
+        if(intent == 'greetings"):
+           prompt += "Greet back the user."
+           Redirect_Message = ''
+           
+           
+           
 
       #appending prompt to messages
     messages.append({"role": "system", "content": prompt})
