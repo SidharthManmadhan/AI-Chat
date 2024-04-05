@@ -139,7 +139,8 @@ def handle_chat():
       "Interview Preparation",
       "Networking",
       "Upskilling",
-      "Salary Negotiation"
+      "Salary Negotiation",
+      "Skills Demand"
   ]
   
   
