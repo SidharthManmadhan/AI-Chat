@@ -263,7 +263,7 @@ def handle_chat():
 #getting the intent of the user query from the response
     message = json.loads(chat_response.choices[0].message.tool_calls[0].function.arguments)["intent_list"]
 
-    st.write(message)
+    
 
 
     user_data = get_user_data(message)
