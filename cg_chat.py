@@ -365,7 +365,7 @@ def handle_chat():
         if (intent == 'other'):
             output = user_data.get(intent, {})
             print(output)
-            prompt += f' If the user query is related to job answer it with example. User Profile: {output}'
+            prompt += f'User Profile: {output}'
             Redirect_Message = ''
 
       #appending prompt to messages
