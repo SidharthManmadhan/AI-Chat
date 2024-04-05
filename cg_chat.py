@@ -370,7 +370,7 @@ def handle_chat():
             prompt += f'User Profile: {output}'
             Redirect_Message = ''
 
-        if(intent == 'greetings"):
+        if(intent == "greetings"):
            prompt += "Greet back the user."
            Redirect_Message = ''
            
