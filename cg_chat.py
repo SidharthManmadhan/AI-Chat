@@ -320,7 +320,7 @@ def handle_chat():
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if the user query is "What are the next steps I should take in my career path?", answer with something like "As a next step you should focuss on these skills and these pathways: " using the data provided. Data:{output}. '
-            Redirect_Message = "Look into Connecting with experts in the job application section of the app. And take a look into our courses to master these skills."
+            Redirect_Message = "Look into 'Build your Network' section in the the app. And take a look into our courses in the 'Skills Builder' section to master these skills."
     
         #propmt to answer queries related to skills recommendation with user journey data
         if(intent == 'recommended_skills'):
@@ -341,7 +341,7 @@ def handle_chat():
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if user query is "What jobs should I apply to?", answer with something like "Here are some job titles that you should focus on given your skills and interests: " using the data provided. Data:{output}. '
-            Redirect_Message = "Check out open jobs that match your career pathway in the job application section of the app."
+            Redirect_Message = "Check out open jobs that match your career pathway in Discover Jobs section of the app."
     
     #prompt to answer resume related queries
         if (intent == 'resume_recommendation'):
