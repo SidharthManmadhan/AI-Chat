@@ -295,7 +295,7 @@ def handle_chat():
                 course_details = output["document"]["course_details"]
                 #if skills from user query is present in the data, we fetch that particular course details from the data.
                 courses_with_skills = [course for course in course_details if skills in course['skills']or skills in course['sub_skills']]
-                prompt +=  f'For example, if user query is "how can I learn SQL?", answer with something like "Here are some courses that you should focus: " using the data provided.Make sure you have provided every course details associated with the user query. Data:{courses_with_skills}. "Tell the user that they can find courses related to your skills in the Role-Specific Skills section and the Cross-Functional Skills section in your {current_pathway} pathway.'
+                prompt +=  f"For example, if user query is 'how can I learn SQL?', answer with something like 'Here are some courses that you should focus: ' using the data provided.Make sure you have provided every course details associated with the user query. Data:{courses_with_skills}. 'Tell the user that they can find courses related to your skills in the 'Skills Builder' section in your {current_pathway} pathway."
                 Redirect_Message = " "
 
         if intent not in processed_intents:
