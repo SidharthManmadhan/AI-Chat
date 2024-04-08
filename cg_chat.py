@@ -355,7 +355,7 @@ def handle_chat():
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if the user query is "how to improve my network based on my pathway?", provide useful tips for connecting with professionals on linkedin based on user profile. User Profile:{output}. '
-            Redirect_Message = 'You can automatically filter relevant professionals on linkedin by using the 'Build your Network' section.'
+            Redirect_Message = "You can automatically filter relevant professionals on linkedin by using the 'Build your Network' section."
     
         #prompt to answer queries related to interviews
         if (intent == 'interview_preparation'):
