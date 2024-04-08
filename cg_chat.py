@@ -327,7 +327,7 @@ def handle_chat():
             output = user_data.get(intent, {})
             print(output)
             prompt +=  f'For example, if the user query is "What skills am I lacking for my desired job role?", answer with something like "Based on your desired job role you should focuss on these skills: " using the data provided. Data:{output}. '
-            Redirect_Message = "Take a look into our courses in the Role specific skills section to master these skills."
+            Redirect_Message = "Take a look into our courses in the 'Skills Builder' section to master these skills."
     
         #prompt to answer quries related to employer recommendation with top employers data
         if(intent == 'recommended_employers'):
@@ -341,28 +341,28 @@ def handle_chat():
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if user query is "What jobs should I apply to?", answer with something like "Here are some job titles that you should focus on given your skills and interests: " using the data provided. Data:{output}. '
-            Redirect_Message = "Check out open jobs that match your career pathway in Discover Jobs section of the app."
+            Redirect_Message = "Check out open jobs that match your career pathway in 'Discover Jobs' section of the app."
     
     #prompt to answer resume related queries
         if (intent == 'resume_recommendation'):
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if the user query is "how to make my resume better", provide usefull 4-5 tips to improve the resume. Resume Text:{output}. '
-            Redirect_Message = f"For a more thorough review, you can also use the Resume Checker feature in the Job Application section in your {current_pathway} pathway, which would provide detailed feedback on your resume"
+            Redirect_Message = f"For a more thorough review, you can also use the 'Resume Checker' feature in the 'Job Application section' in your {current_pathway} pathway, which would provide detailed feedback on your resume"
     
         #prompt to answer queries related to networking
         if (intent == 'networking'):
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if the user query is "how to improve my network based on my pathway?", provide useful tips for connecting with professionals on linkedin based on user profile. User Profile:{output}. '
-            Redirect_Message = 'You can automatically filter relevant professionals on linkedin by using the Connect with Experts section in your Job Application phase.'
+            Redirect_Message = 'You can automatically filter relevant professionals on linkedin by using the 'Build your Network' section.'
     
         #prompt to answer queries related to interviews
         if (intent == 'interview_preparation'):
             output = user_data.get(intent, {})
             print(output)
             prompt += f'For example, if user query is "How do I prepare for interviews?", provide useful tips for interviews and suggest practicing questions like answer with something like "Here are some questions that will help you in technical interviews: " using the data provided. Data:{output}. '   #prompt to answer queries related to interviews
-            Redirect_Message  = "If you want to conduct a mock interview check out the Interview Preparation section in your app."
+            Redirect_Message  = "If you want to conduct a mock interview check out the 'Interview Prep' section in your app."
     
         #prompt to answer other queries which is not related to any of the intent
         if (intent == 'other'):
