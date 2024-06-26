@@ -139,9 +139,7 @@ def handle_chat():
       "Interview Preparation",
       "Networking",
       "Upskilling",
-      "Salary Negotiation",
-      "Skills Demand"
-  ]
+      "Salary Negotiation"]
   
   
 
@@ -155,9 +153,23 @@ def handle_chat():
   
   chat = st.chat_input()
   
+  detailed_questions = {
+    "Email Recruiter": "How should I email a recruiter about a job application? Can you provide an example?",
+    "Interview Preparation": "What are the best strategies for preparing for interviews, and could you provide an example of how to solve a typical interview question?",
+    "Networking": "How can a student effectively network in their specific field of interest? Could you provide strategies tailored to data science ?",
+    "Upskilling": "What are the best strategies for upskilling in data science? Can you suggest some effective methods or resources? ",
+    "Salary Negotiation": "When is the right time to bring up salary during the job application process? Provide an example conversation.",
+  
+}
+
+# Input for the chat
+
+
+# Buttons for each default question
   for question in default_questions:
     if st.button(question):
-        chat = question  # Set 'chat' to the question from the button
+        # Update the chat input with the detailed question associated with the button pressed
+        chat = detailed_questions[question] # Set 'chat' to the question from the button
         
 
 
@@ -174,6 +186,7 @@ def handle_chat():
         #else:
   if chat:
     user_input = chat
+    st.write(user_input)
     context = f"""Your name is CareerGenie. You are a fun and engaging career advisor that answers in less than 100 words. If the conversation drifts into non-career topics, bring it back to career related topics. Name of the user is {name}. Current user pathway is {current_pathway}. """
     messages.append({"role": "system", "content": context})
     if len(messages) > 10:
@@ -263,6 +276,7 @@ def handle_chat():
 
 #getting the intent of the user query from the response
     message = json.loads(chat_response.choices[0].message.tool_calls[0].function.arguments)["intent_list"]
+    st.write(message)
 
     
 
